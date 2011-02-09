@@ -4,29 +4,32 @@
 # ILMBASE_LIBRARIES - ilm base libraries
 # ILMBASE_FOUND - true if found
 
-if (ILMBASE_INCLUDE_DIR AND ILMBASE_LIBRARIES)
-  # already in cache, be silent
-  set (ILMBASE_FIND_QUIETLY TRUE)
-endif (ILMBASE_INCLUDE_DIR AND ILMBASE_LIBRARIES)
+# Mark the key variables as advanced so that they don't convolute the cmake
+# gui. These variables are dervied from the IlmBase_Inc_Dir and IlmBase_Lib_Dir
+# variables set by the user. 
+MARK_AS_ADVANCED (ILMBASE_INCLUDE_DIR 
+                  ILMBASE_ex_LIBRARY
+                  ILMBASE_math_LIBRARY
+                  ILMBASE_half_LIBRARY)
 
-# find the headers
+# Find the headers
 find_path (ILMBASE_INCLUDE_DIR
   OpenEXR/ImathMath.h
   PATHS ${IlmBase_Inc_Dir}
   )
 
-# find the libraries
-find_library (ILMBASE_EX_LIBRARY Iex
+# Find the libraries
+find_library (ILMBASE_ex_LIBRARY Iex
   HINTS ${ILMBASE_INCLUDE_DIR}/../lib
   PATHS ${IlmBase_Lib_Dir}
   )
 
-find_library (ILMBASE_MATH_LIBRARY Imath
+find_library (ILMBASE_math_LIBRARY Imath
   HINTS ${ILMBASE_INCLUDE_DIR}/../lib
   PATHS ${IlmBase_Lib_Dir}
   )
 
-find_library (ILMBASE_HALF_LIBRARY Half
+find_library (ILMBASE_half_LIBRARY Half
   HINTS ${ILMBASE_INCLUDE_DIR}/../lib
   PATHS ${IlmBase_Lib_Dir}
   )
@@ -37,17 +40,23 @@ include (FindPackageHandleStandardArgs)
 find_package_handle_standard_args (
   IlmBase
   "
+
   IlmBase (http://www.openexr.com/) not found. Use ccmake to configure paths.
-  Adjust values for IlmBase_Inc_Dir and IlmBase_Lib_Dir
+  Adjust values for IlmBase_Inc_Dir and IlmBase_Lib_Dir.
+  IlmBase_Inc_Dir - is the path to the location of the ilmbase include
+                    directory.
+  IlmBase_Lib_Dir - is the path to the location of the Iex, Imath, and
+                    Half libraries. If this is located in the path:
+                    \"IlmBase_Inc_Dir/../lib\", then you don't need to set this
+                    variable.
+
   "
   ILMBASE_INCLUDE_DIR 
-  ILMBASE_MATH_LIBRARY ILMBASE_EX_LIBRARY ILMBASE_HALF_LIBRARY)
+  ILMBASE_math_LIBRARY ILMBASE_ex_LIBRARY ILMBASE_half_LIBRARY)
 
+# Set the ILMBASE_LIBRARIES variable once we have found the required ilmbase
+# libraries. 
 if (ILMBASE_FOUND)
-  set (ILMBASE_INCLUDE_DIR ${ILMBASE_INCLUDE_DIR})
-  set (ILMBASE_LIBRARIES ${ILMBASE_EX_LIBRARY} ${ILMBASE_HALF_LIBRARY})
-  set (ILMBASE_LIBRARIES ${ILMBASE_LIBRARIES} ${ILMBASE_MATH_LIBRARY})
-else (ILMBASE_FOUND)
-  set (ILMBASE_INCLUDE_DIR)
-  set (ILMBASE_LIBRARIES)
+  set (ILMBASE_LIBRARIES ${ILMBASE_ex_LIBRARY} ${ILMBASE_half_LIBRARY})
+  set (ILMBASE_LIBRARIES ${ILMBASE_LIBRARIES} ${ILMBASE_math_LIBRARY})
 endif (ILMBASE_FOUND)

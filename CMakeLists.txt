@@ -33,7 +33,7 @@ endif ((NOT CMAKE_BUILD_TYPE MATCHES Debug) AND
 # Additional options
 #-------------------------------------------------------------------------------
 
-# Shared on static library? 
+# Shared or static library? 
 option (BUILD_SHARED "Build shared library?" OFF)
 
 # Building unittests?

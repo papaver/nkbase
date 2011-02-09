@@ -24,11 +24,13 @@ target_link_libraries (${PROJECT_NAME} ${ILMBASE_LIBRARIES})
 # What do we install when running 'make install'
 #-------------------------------------------------------------------------------
 
+# Copy over the library into the lib directory
 install (
   TARGETS ${PROJECT_NAME}
   DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
   )
 
+# Copy over all headers into an include directory
 install (
   FILES ${Headers}
   DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME}
