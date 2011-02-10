@@ -30,6 +30,20 @@ if ((NOT CMAKE_BUILD_TYPE MATCHES Debug) AND
 endif ((NOT CMAKE_BUILD_TYPE MATCHES Debug) AND 
        (NOT CMAKE_BUILD_TYPE MATCHES Release))
 
+# Compiler Flags 
+#-------------------------------------------------------------------------------
+
+# Add common flags.
+set (CMAKE_CXX_FLAGS
+     "-Wall -Wextra -Werror -ansi -fno-common -mfix-and-continue" 
+     CACHE STRING "" FORCE)
+
+# set debug flags
+set (CMAKE_CXX_FLAGS_DEBUG "-O0 -g -DDEBUG" CACHE STRING "" FORCE)
+
+# set release flags
+set (CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG" CACHE STRING "" FORCE)
+
 # Additional options
 #-------------------------------------------------------------------------------
 
@@ -68,22 +82,6 @@ set (CppUnit_Lib_Dir "" CACHE PATH
 # Make sure we have ilm base
 find_package (IlmBase REQUIRED)
 include_directories (${ILMBASE_INCLUDE_DIR})
-
-# Compiler Flags 
-#-------------------------------------------------------------------------------
-
-if (CMAKE_COMPILER_IS_GNUCXX) 
-  # Add common flags.
-  set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -ansi -fno-common")
-  set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -mfix-and-continue")
-
-  # set debug flags
-  set (CMAKE_CXX_FLAGS_DEBUG "-O0 -g -DDEBUG")
-
-  # set release flags
-  set (CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
-
-endif (CMAKE_COMPILER_IS_GNUCXX)
 
 # Subdirectories
 #-------------------------------------------------------------------------------
