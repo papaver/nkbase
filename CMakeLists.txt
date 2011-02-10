@@ -59,7 +59,7 @@ option (BUILD_UNITTESTS "Build unittests?" ON)
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
 # add common cmake file
-include (nkbaseCommon)
+include (common)
 
 # Options for setting library base paths
 #------------------------------------------------------------------------------
