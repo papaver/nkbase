@@ -32,6 +32,7 @@
 //------------------------------------------------------------------------------
 // Types.h
 //------------------------------------------------------------------------------
+
 #ifndef __NKBASE_TYPES_H__
 #define __NKBASE_TYPES_H__
 
@@ -56,23 +57,23 @@ BEGIN_NK_NS
 
 //- signed integer -------------------------------------------------------------
 
-typedef int8_t               i8;
-typedef int16_t              i16;
-typedef int32_t              i32;
-typedef int64_t              i64;
+typedef int8_t   i8;
+typedef int16_t  i16;
+typedef int32_t  i32;
+typedef int64_t  i64;
 
 //- unsigned integer -----------------------------------------------------------
 
-typedef uint8_t              u8;
-typedef uint16_t             u16;
-typedef uint32_t             u32;
-typedef uint64_t             u64;
+typedef uint8_t  u8;
+typedef uint16_t u16;
+typedef uint32_t u32;
+typedef uint64_t u64;
 
 //- float ----------------------------------------------------------------------
 
-typedef ::half               f16;
-typedef float                f32;
-typedef double               f64;
+typedef ::half   f16;
+typedef float    f32;
+typedef double   f64;
 
 //- vectors --------------------------------------------------------------------
 
