@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 //
-// Copyright (c) 2011, NektarFX, Inc.
+// Copyright (c) 2011, NektarFX, Inc. (http://www.nektarfx.com)
 // All rights reserved.
 // 
 // Redistribution and use in source and binary forms, with or without modific-
