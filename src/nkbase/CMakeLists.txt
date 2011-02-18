@@ -24,7 +24,8 @@ endif (BUILD_SHARED)
 # Set the installation prefix path so that the path is encoded in the library. 
 set_target_properties (${PROJECT_NAME} PROPERTIES
                        INSTALL_NAME_DIR ${LIB_INSTALL_PATH}
-                       INSTALL_RPATH ${LIB_INSTALL_PATH})
+                       INSTALL_RPATH ${LIB_INSTALL_PATH}
+                       VERSION ${nkbase_VERSION})
 
 target_link_libraries (${PROJECT_NAME} ${ILMBASE_LIBRARIES})
 

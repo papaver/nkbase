@@ -48,7 +48,7 @@ set (CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG" CACHE STRING "" FORCE)
 #-------------------------------------------------------------------------------
 
 # Shared or static library? 
-option (BUILD_SHARED "Build shared library?" OFF)
+option (BUILD_SHARED "Build shared library?" ON)
 
 # Building unittests?
 option (BUILD_UNITTESTS "Build unittests?" ON)

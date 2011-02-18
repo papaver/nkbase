@@ -50,6 +50,9 @@ find_package_handle_standard_args (
                     \"IlmBase_Inc_Dir/../lib\", then you don't need to set this
                     variable.
 
+  If you have questions concerning building the library, please contact us at:
+  code@nektarfx.com
+
   "
   ILMBASE_INCLUDE_DIR 
   ILMBASE_math_LIBRARY ILMBASE_ex_LIBRARY ILMBASE_half_LIBRARY)

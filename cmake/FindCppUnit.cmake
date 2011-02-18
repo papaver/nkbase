@@ -36,6 +36,9 @@ find_package_handle_standard_args (
                     is located in the path: \"CppUnit_Inc_Dir/../lib\", then 
                     you don't need to set this variable.
 
+  If you have questions concerning building the library, please contact us at:
+  code@nektarfx.com
+
   "
   CPPUNIT_LIBRARY CPPUNIT_INCLUDE_DIR
   )
