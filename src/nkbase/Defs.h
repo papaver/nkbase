@@ -46,5 +46,19 @@
 #define END_NK_NS   }
 
 //------------------------------------------------------------------------------
+// Useful macros.
+//------------------------------------------------------------------------------
+
+/**
+ * Define the unused attribute so that we can supress warning during
+ * compilation.
+ */
+#if defined(__GNUC__)
+    #define NK_UNUSED_PARAM(x) NK_UNUSED_PARAM_ ## x __attribute__((unused))
+#else
+    #define NK_UNUSED_PARAM(x) x
+#endif
+
+//------------------------------------------------------------------------------
 
 #endif // __NKBASE_DEFS_H__

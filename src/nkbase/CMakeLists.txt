@@ -40,7 +40,7 @@ install (
 
 # Copy over all headers into an include directory
 install (
-  FILES ${Headers}
+  FILES ${Headers} ${Inlines}
   DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME}
   )
 
