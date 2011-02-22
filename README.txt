@@ -129,12 +129,18 @@ Building & Installation
        
        make all;
 
+    4a. If you have BUILD_UNITTESTS set to ON, you should have a unittest
+        directory in your build directory. You can run unittests by running the
+        executable: ./unittests/unittests 
+
     5. To install the project in the location of your CMAKE_INSTALL_PREFIX path
        type : 
 
        make install;
 
-       Note that this may require you to have sudo/root privelages. 
+       Note that this may require you to have sudo/root privelages. Also, this
+       will only install the library and it's headers; it will not install
+       unittests. 
 
     6. If you are having trouble building/installing the library using these
        steps, check the project website for documentation at
