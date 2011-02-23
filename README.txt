@@ -27,7 +27,7 @@ Contributing
     The success of the library depends on contributors like yourself. There are
     several ways to contribute to the project, from writing documentation to
     writing language bindings to adding core features. You don't necessarily
-    have to be developer to contribute. 
+    have to be a developer to contribute. 
 
     For more details on how to contribute to our open source projects, please
     refer to the contribution guide at : http://www.nektarfx.com/contributing
@@ -138,8 +138,8 @@ Building & Installation
 
        make install;
 
-       Note that this may require you to have sudo/root privelages. Also, this
-       will only install the library and it's headers; it will not install
+       Note that this may require you to have sudo/root privileges. Also, this
+       will only install the library and its headers; it will not install
        unittests. 
 
     6. If you are having trouble building/installing the library using these
@@ -154,8 +154,8 @@ When Things Go Wrong
 
     If you are having problems building, installing, running, and/or using
     nkbase that you believe is attributed to a bug, please file a bug using the
-    issue tracker on github at {TODO: INSERT_LINK_HERE} or email us at
-    code@nektarfx.com. 
+    issue tracker on github at https://github.com/NektarFX/nkbase/issues or 
+    email us at code@nektarfx.com. 
 
     In all bug-reports, *please* tell what version of the library you are
     talking about, how to duplicate the problem, and what your setup is. Please
