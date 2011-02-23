@@ -27,7 +27,7 @@ Contributing
     The success of the library depends on contributors like yourself. There are
     several ways to contribute to the project, from writing documentation to
     writing language bindings to adding core features. You don't necessarily
-    have to be developer to contribute. 
+    have to be a developer to contribute. 
 
     For more details on how to contribute to our open source projects, please
     refer to the contribution guide at : http://www.nektarfx.com/contributing
@@ -138,8 +138,8 @@ Building & Installation
 
        make install;
 
-       Note that this may require you to have sudo/root privelages. Also, this
-       will only install the library and it's headers; it will not install
+       Note that this may require you to have sudo/root privileges. Also, this
+       will only install the library and its headers; it will not install
        unittests. 
 
     6. If you are having trouble building/installing the library using these
