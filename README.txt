@@ -154,8 +154,8 @@ When Things Go Wrong
 
     If you are having problems building, installing, running, and/or using
     nkbase that you believe is attributed to a bug, please file a bug using the
-    issue tracker on github at {TODO: INSERT_LINK_HERE} or email us at
-    code@nektarfx.com. 
+    issue tracker on github at https://github.com/NektarFX/nkbase/issues or 
+    email us at code@nektarfx.com. 
 
     In all bug-reports, *please* tell what version of the library you are
     talking about, how to duplicate the problem, and what your setup is. Please
