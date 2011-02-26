@@ -15,7 +15,7 @@ What is nkbase?
     file for more details.
 
     To keep up with news and the latest developments on nkbase, you may want to
-    subscribe to our rss feed at : http://www.nektarfx.com/nkbase
+    subscribe to our rss feed at : http://www.nektarfx.com/projects/nkbase
 
     If you have questions about using and contributing to NektarFX libraries,
     you can email us at: code@nektarfx.com. 
@@ -35,6 +35,22 @@ Contributing
     If you have feature/support requests or general comments, questions, and
     concerns, please contact us at code@nektarfx.com. We are always eager to
     hear from you with feedback that can help improve the project.
+
+--------------------------------------------------------------------------------
+
+Checking out the Source
+
+    The code is organized into two branches: "dev" and "master". The master
+    branch is our release branch and is always stable. The development branch
+    contains incremental feature development from NektarFX as well as external
+    contributors like yourself. The "dev" branch is not guaranteed to be stable
+    but will most likely contain newer features. The "master" branch will only
+    contain our stable releases with each commit tagged with the release
+    version of the library. 
+
+    Every so often, NektarFX will integrate a commit point from the "dev"
+    branch into the "master" branch for a new release if and only if the commit
+    point is stable passes QA.
 
 --------------------------------------------------------------------------------
 
