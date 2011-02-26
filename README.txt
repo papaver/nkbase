@@ -40,6 +40,10 @@ Contributing
 
 Checking out the Source
 
+    You can checkout the source using git from github. Refer to 
+    http://help.github.com/ for details in checking out git repositories and
+    using github in general. 
+
     The code is organized into two branches: "dev" and "master". The master
     branch is our release branch and is always stable. The development branch
     contains incremental feature development from NektarFX as well as external
